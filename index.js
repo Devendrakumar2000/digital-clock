@@ -37,43 +37,63 @@ if(hours>12)
 }
 setInterval(clock,1000);
 
+function hover(){
+    let e = document.getElementById("dev");
+    e.innerText = "Party Time !!";
+    e.style.backgroundColor = "blue";
+    e.style.backgroundImage= " linear-gradient( to left, blue 30%,pink 70%)";
+    e.style.color ="white";
+    }
+    function hoverout(){
+        let e1 = document.getElementById("dev");
+        e1.innerText = "Set Time";
+        e1.style.backgroundColor = "red";
+        e1.style.backgroundImage= " linear-gradient( to right, blue 30%,pink 70%)";
+        e1.style.color ="white";
+    }
     
 function settime() {
-    let a = document.getElementById("wakup").value;
-    let b = document.getElementById("lunch").value;
-    let c = document.getElementById("nap").value;
-    let d = document.getElementById("night").value;
     let alerts = document.getElementsByClassName("alert");
     let tasks = document.getElementsByClassName("task");
-    let imgs = document.getElementsByTagName("image");
+    let imgs = document.getElementsByTagName("img");
     let h = new Date().getHours();
     imgs[5].src = "./morning.png";
 
-    if (a == h) {
+    let w = document.getElementById("wakeup");
+     let w1=w.value;
+
+    if (w1 == h) {
         alerts[0].innerText = "GOOD MORNING !! WAKE UP !!";
         tasks[0].innerText = "GRAB SOME HEALTHY BREAKFAST !!!";
+        imgs[5].src="./morning.png"
     }
-    let w = document.getElementById("wakeupTime");
-    w.innerText = wakeup.options[wakup.selectedIndex].text;
-    if (b == h) {
+    
+    let l = document.getElementById("lunch");
+    let l1 = l.value;
+
+    if (l1 == h) {
         alerts[0].innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
         tasks[0].innerText = "LET'S HAVE SOME LUNCH !!";
-        imgs[5].src = "./lunch_image.png";
+        imgs[5].src = "./lunch.png";
     }
-    let l = document.getElementById("lunchTime");
-    l.innerText = lunch.options[lunch.selectedIndex].text;
-    if (c == h) {
+    
+    let n = document.getElementById("nap");
+     let n1 = n.value;
+
+
+    if (n1 == h) {
         alerts[0].innerText = "GOOD EVENING !!";
         tasks[0].innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING !";
-        imgs[5].src = ".morning.png";
+        imgs[5].src = "./lunch_image.png";
     }
-    let n = document.getElementById("napTime");
-    n.innerText = nap.options[nap.selectedIndex].text;
-    if (d == h) {
+    
+    let N = document.getElementById("night");
+    let N1 = N.value;
+
+    if (N1 == h) {
         alerts[0].innerText = "GOOD NIGHT !! WAKE UP !!";
         tasks[0].innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
         imgs[5].src = "./night.png";
     }
-    let N = document.getElementById("nightTime");
-    N.innerText = night.options[night.selectedIndex].text;
+   
 }
