@@ -1,4 +1,4 @@
- .timebox{width: 400px;padding: 4px;margin : 10px 0px 0px 115px;
+  .timebox{width: 400px;padding: 4px;margin : 10px 0px 0px 115px;
     background-color: white;border-radius: 10px;
 }
 .box1{
@@ -16,15 +16,8 @@ button{width: 200px;text-align: center;padding: 3px 0px;
         blue 30%,pink 70%
     );border-radius: 2px;margin :20px 0px 0px 115px;
 }
-button:hover{
-    width: 200px;text-align: center;padding: 3px 0px;
-    background-image: linear-gradient( to left,
-        blue 30%,pink 70%
-    );border-radius: 2px;margin :20px 0px 0px 115px;
-
-}
-button:hover::before{
-    content: "party Time !!";
+#dev{border: 1px solid blue;
+    color: white;
 }
 .wlnN{
     color: blue;margin-left: 30px;
