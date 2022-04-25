@@ -57,7 +57,6 @@ function settime() {
     let tasks = document.getElementsByClassName("task");
     let imgs = document.getElementsByTagName("img");
     let h = new Date().getHours();
-    imgs[5].src = "./morning.png";
 
     let w = document.getElementById("wakeup");
      let w1=w.value;
